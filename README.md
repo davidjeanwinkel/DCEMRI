@@ -6,7 +6,7 @@ David J. Winkel
 
 This is the README file for the experiment. This is the Session Info for the Experiment:
 
-``` r
+``` r {message=FALSE}
 sessionInfo()
 ```
 
