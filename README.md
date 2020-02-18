@@ -3,7 +3,7 @@ README
 David J. Winkel
 1/13/2020
 
-``` r {results='hide')
+``` r {results='hide', message=FALSE)
 library(ggplot2)
 library(tidyverse)
 library(dplyr)
