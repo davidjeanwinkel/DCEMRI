@@ -3,23 +3,6 @@ README
 David J. Winkel
 1/13/2020
 
-``` r {results='hide', message=FALSE)
-library(ggplot2)
-library(tidyverse)
-library(dplyr)
-library(readr)
-library(xlsx)
-library(readxl)
-library(ggpubr)
-library(openxlsx)
-library(ROCR)
-library(pROC)
-library(caret)
-library(corrplot)           
-library(tictoc)
-library(janitor)
-library(DMwR)
-```
 
 This is the README file for the experiment. This is the Session Info for the Experiment:
 
