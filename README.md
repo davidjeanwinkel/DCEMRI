@@ -62,3 +62,6 @@ sessionInfo()
     ## [70] prodlim_2018.04.18 broom_0.5.2        class_7.3-15      
     ## [73] survival_2.44-1.1  timeDate_3043.102  rJava_0.9-11      
     ## [76] iterators_1.0.12   lava_1.6.5         ipred_0.9-9
+    
+    
+  The code can be found in the Git.R file. 
