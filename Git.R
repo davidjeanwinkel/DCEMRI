@@ -110,7 +110,7 @@ exp3 <- exp3 %>%
 
 
 
-exp4 <- read_excel("results_plan3.xlsx", sheet = 3) 
+exp4 <- read_excel("data.xlsx") 
 exp4 <- exp4 %>%
   filter(Gleason_sum >= 7)
 
@@ -417,8 +417,8 @@ set.seed(42)
 # Data Summary ------------------------------------------------------------
 
 
-sprintf("Intermediate vs. High-Grade PCA, GBM with: %.3f", ROC_gbm_exp1$auc)
-sprintf("Intermediate vs. High-Grade PCA, GBM without: %.3f", ROC_gbm_noperf_exp1$auc)
+sprintf("Benign vs. Malignant, GBM with: %.3f", ROC_gbm_exp1$auc)
+sprintf("Benign vs. Malignant, GBM without: %.3f", ROC_gbm_noperf_exp1$auc)
 sprintf("p-Value: %.3f", roctest13$p.value)
 
 sprintf("Low-Grade vs. High-Grade PCA, GBM with: %.3f", ROC_gbm_exp2$auc)
@@ -436,7 +436,7 @@ sprintf("Intermediate vs. High-Grade PCA, GBM without: %.3f", ROC_gbm_noperf_exp
 sprintf("p-Value: %.3f", roctest10$p.value)
 
 
-# GBM only -----------------------------------------------------------------
+# ROC Plots -----------------------------------------------------------------
 
 
 par(mfrow=c(1,1))
@@ -453,38 +453,3 @@ plot(roc6, col=4, lty=3,lwd=3,  add=TRUE, cex.axis=1.5, cex.lab=1.5)
 
 plot(roc7, col=1, lty=1, lwd=3, cex.axis=1.5, cex.lab=1.5)
 plot(roc8, col=4, lty=3, lwd=3, add=TRUE, cex.axis=1.5, cex.lab=1.5)
-
-
-(a4 <- d %>%
-    ggplot(aes(x=importance))+
-    geom_point()+
-    theme_minimal()+
-    theme(axis.text = element_text(size = 18, face = "bold"),
-          axis.title.x = element_blank(),
-          axis.title.y = element_text(size = 18, face = "bold")))
-
-
-(a1 <- a %>%
-    ggplot(aes(x=importance))+
-    geom_point()+
-    theme_minimal()+
-    theme(axis.text = element_text(size = 18, face = "bold"),
-          axis.title.y = element_text(size = 18, face = "bold"),
-          axis.title.x = element_blank()))
-
-(a2 <- b %>%
-    ggplot(aes(x=importance))+
-    geom_point()+
-    theme_minimal()+
-    theme(axis.text = element_text(size = 18, face = "bold"),
-          axis.title.y = element_text(size = 20, face = "bold"),
-          axis.title.x = element_blank()))
-
-(a3 <- c %>%
-    ggplot(aes(x=importance))+
-    geom_point()+
-    theme_minimal()+
-    theme(axis.text = element_text(size = 18, face = "bold"),
-          axis.title.x = element_text(size = 20, face = "bold"),
-          axis.title.y = element_text(size = 18, face = "bold")))
-
